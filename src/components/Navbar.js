@@ -120,7 +120,7 @@ function Navbar() {
               textDecoration: "none",
             }}
           >
-            LOGO
+            Exchange
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             <Button
