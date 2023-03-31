@@ -24,7 +24,7 @@ function Navbar() {
   };
 
   return (
-    <AppBar position="static" style={{ backgroundColor: '#212121' }}>
+    <AppBar position="static" style={{ backgroundColor: "#212121" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
@@ -75,32 +75,29 @@ function Navbar() {
                 display: { xs: "block", md: "none" },
               }}
             >
-              <MenuItem onClick={handleCloseNavMenu}>
-                <Button
-                  onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: "primary", display: "block" }}
-                >
-                  <Link
-                    to="/"
-                    style={{ textDecoration: "none", color: "primary" }}
+              <Link to="/" style={{ textDecoration: "none", color: "primary" }}>
+                <MenuItem onClick={handleCloseNavMenu}>
+                  <Button
+                    onClick={handleCloseNavMenu}
+                    sx={{ my: 2, color: "primary", display: "block" }}
                   >
                     Converter
-                  </Link>
-                </Button>
-              </MenuItem>
-              <MenuItem onClick={handleCloseNavMenu}>
-                <Button
-                  onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: "primary", display: "block" }}
-                >
-                  <Link
-                    to="/exchange"
-                    style={{ textDecoration: "none", color: "primary" }}
+                  </Button>
+                </MenuItem>
+              </Link>
+              <Link
+                to="/exchange"
+                style={{ textDecoration: "none", color: "primary" }}
+              >
+                <MenuItem onClick={handleCloseNavMenu}>
+                  <Button
+                    onClick={handleCloseNavMenu}
+                    sx={{ my: 2, color: "primary", display: "block" }}
                   >
                     Rate Tracker
-                  </Link>
-                </Button>
-              </MenuItem>
+                  </Button>
+                </MenuItem>
+              </Link>
             </Menu>
           </Box>
           <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
@@ -123,25 +120,25 @@ function Navbar() {
             Exchange
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            <Button
-              onClick={handleCloseNavMenu}
-              sx={{ my: 2, color: "white", display: "block" }}
-            >
-              <Link to="/" style={{ textDecoration: "none", color: "white" }}>
+            <Link to="/" style={{ textDecoration: "none", color: "white" }}>
+              <Button
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: "white", display: "block" }}
+              >
                 Converter
-              </Link>
-            </Button>
-            <Button
-              onClick={handleCloseNavMenu}
-              sx={{ my: 2, color: "white", display: "block" }}
+              </Button>
+            </Link>
+            <Link
+              to="/exchange"
+              style={{ textDecoration: "none", color: "white" }}
             >
-              <Link
-                to="/exchange"
-                style={{ textDecoration: "none", color: "white" }}
+              <Button
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: "white", display: "block" }}
               >
                 Rate Tracker
-              </Link>
-            </Button>
+              </Button>
+            </Link>
           </Box>
         </Toolbar>
       </Container>
